@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/civet148/copier"
+	copier "github.com/civet148/go-copier"
 )
 
 type TypeStruct1 struct {

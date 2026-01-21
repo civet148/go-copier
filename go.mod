@@ -1,3 +1,3 @@
-module github.com/civet148/copier
+module github.com/civet148/go-copier
 
 go 1.13

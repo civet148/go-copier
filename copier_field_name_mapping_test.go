@@ -1,7 +1,7 @@
 package copier_test
 
 import (
-	"github.com/civet148/copier"
+	copier "github.com/civet148/go-copier"
 	"reflect"
 	"testing"
 )

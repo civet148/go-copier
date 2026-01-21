@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/civet148/copier"
+	"github.com/civet148/go-copier"
 )
 
 type User struct {

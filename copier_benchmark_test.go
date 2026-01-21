@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/civet148/copier"
+	copier "github.com/civet148/go-copier"
 )
 
 func BenchmarkCopyStruct(b *testing.B) {

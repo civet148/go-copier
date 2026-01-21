@@ -1,9 +1,10 @@
 package copier_test
 
 import (
-	"github.com/civet148/copier"
 	"reflect"
 	"testing"
+
+	copier "github.com/civet148/go-copier"
 )
 
 type A struct {
