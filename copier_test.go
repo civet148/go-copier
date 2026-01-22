@@ -1783,6 +1783,7 @@ type UserFrom struct {
 	UpdatedAt    int64
 	LoginAt      time.Time
 	ActiveAt     string
+	ExInfo       map[string]any
 }
 
 type UserTo struct {
@@ -1793,6 +1794,7 @@ type UserTo struct {
 	UpdatedAt    *time.Time
 	LoginAt      int64
 	ActiveAt     *time.Time
+	ExInfo       map[string]any
 }
 
 func TestTimeToNumberOrString(t *testing.T) {
@@ -1807,6 +1809,11 @@ func TestTimeToNumberOrString(t *testing.T) {
 		UpdatedAt:    t64,
 		LoginAt:      tm,
 		ActiveAt:     "",
+		ExInfo: map[string]any{
+			"address": "DC",
+			"phone":   "+01324299",
+			"age":     23,
+		},
 	}
 	var to *UserTo
 	err := copier.Copy(&to, &from, copier.WithTimeLayout(time.DateTime))
