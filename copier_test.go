@@ -2,6 +2,7 @@ package copier_test
 
 import (
 	"database/sql"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"reflect"
@@ -1845,6 +1846,11 @@ func TestTimeToNumberOrString(t *testing.T) {
 		t.Errorf("to ActiveAt (%v) value should be nil", to.ActiveAt)
 		return
 	}
-	t.Logf("from  [%+v]", from)
-	t.Logf("to [%+v]", to)
+	t.Logf("from  [%+v]", toJson(from))
+	t.Logf("to [%+v]", toJson(to))
+}
+
+func toJson(v any) string {
+	data, _ := json.Marshal(v)
+	return string(data)
 }
